@@ -1,0 +1,173 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>YONDU Web Services | About Us</title>
+        <meta name="description" content="">
+        <!--
+        This has been remove because the page is not responsive-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/transformicon.css">
+        
+        <link rel="stylesheet" href="css/style.css">
+        
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="masthead masthead--custom home-container">
+            <div class="inner">
+             <img src="images/sample-main-logo.png" alt="" class='img-responsive logo-mini'>
+              <div class="home-container__navigation pull-right tcon tcon-menu--xcross" id="togglenav">
+                 <span class="tcon-menu__lines" aria-hidden="true"></span>
+                 <span class="tcon-visuallyhidden">toggle menu</span>
+                 <!-- <i class="fa fa-bars" id="togglenav"></i>-->
+              </div>
+             <nav>
+                <ul class="nav masthead-nav">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">About Us</a></li>
+                  <li class="active"><a href="#">Contact Us</a></li>
+                </ul>
+              </nav>
+
+            </div>
+        </div>
+        <main class="main-container container">
+            <section class="row section">
+                <h2 class='section__title'>
+                    <span>Contact Us</span>
+                </h2>
+                <div class='col-sm-12 'id="googleMap"></div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="section__sub">
+                            <h5 class="section__sub__title">
+                                <strong>Locate</strong>
+                            </h5>
+                            <i class="fa fa-map-marker"></i>
+                            <address>
+                                7th Floor, Panorama Tower <br>
+                                34th Street corner Lane A <br>
+                                Bonifactio Global City <br>
+                                Taguig City
+                            </address>
+                        </div>
+                        <div class="section__sub">
+                           <h5 class="section__sub__title">
+                                <strong>Connect</strong>
+                            </h5>
+                            <ul class="list-unstyled contact-us-social-list">
+                                <li>
+                                   <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-envelope fa-lg"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="section__sub">
+                           <h5 class="section__sub__title">
+                                <strong>Inquire</strong>
+                            </h5>
+                           <form action="" class="inquire-form">
+                               <div class="row form-group">
+                                   <div class="col-sm-6">
+                                       <input type="text" class="col-sm-6 form-control" placeholder="name">
+                                   </div>
+                                   <div class="col-sm-6">
+                                       <input type="email" class="col-sm-6 form-control" placeholder="email address">
+                                   </div>
+                               </div>
+                               <div class="row form-group">
+                                   <div class="col-sm-6">
+                                       <input type="text" class="col-sm-6 form-control" placeholder="contact number">
+                                   </div>
+                                   <div class="col-sm-6">
+                                       <input type="email" class="col-sm-6 form-control" placeholder="subject">
+                                   </div>
+                               </div>
+                               <div class="row form-group">
+                                  <div class="col-sm-12">
+                                       <textarea name="" id="" cols="30" rows="10" class="form-control" placeholder="message"></textarea>
+                                  </div>
+                               </div>
+                               <input type="submit" class="btn btn-submit pull-left" value="submit">
+                           </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+        <footer class="footer-custom">
+             <p>&copy; Powered by: <a href="http://yondu.com">YONDU</a>. All Rights Reserved 2015.</p>
+        </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/transformicon.js"></script>
+        <script src="http://maps.googleapis.com/maps/api/js"></script>
+        <script src="js/main.js"></script>
+        <script>
+            transformicons.add('.tcon');
+            
+            var locations = [
+              ['7th Floor, Panorama Tower',14.555983, 121.049686, 1]
+            ];
+
+            var map = new google.maps.Map(document.getElementById('googleMap'), {
+              zoom: 15,
+              scrollwheel: false,
+              center: new google.maps.LatLng(14.555983, 121.049686),
+              mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+
+            var infowindow = new google.maps.InfoWindow();
+            
+            var marker, i;
+
+            for (i = 0; i < locations.length; i++) {  
+              marker = new google.maps.Marker({
+                position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                map: map
+              });
+
+              google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                return function() {
+                  infowindow.setContent(locations[i][0]);
+                  infowindow.open(map, marker);
+                }
+              })(marker, i));
+            }
+            
+        </script>
+        
+        
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <!--<script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>-->
+    </body>
+</html>

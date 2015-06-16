@@ -1,0 +1,23 @@
+//    $(document).on('click', '#upload', function (e) {
+//        var formData = new FormData($('#formUpload')[0]);
+//        e.preventDefault();
+//        $.ajax({
+//            type: 'POST',
+//            headers: {
+//                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+//            },
+//            url: "{!! URL::route('addEditorFile') !!}",
+//            enctype: 'multipart/form-data',
+//            async: false,
+//            cache: false,
+//            contentType: false,
+//            processData: false,
+//            data: formData,
+//            dataType: 'json',
+//            success: (function (data) {
+//                location.reload();
+//
+//            })
+//
+//        });
+//    });

@@ -1,0 +1,6 @@
+README
+@version: 2015-05-13
+@author: Charles Kenrick Chua
+
+This is a readme. Place relevant information in this file as needed.
+The purpose of this is file is to ensure that any special or unique steps needed to install a module that are not natively supported by the framework can still be carried out.

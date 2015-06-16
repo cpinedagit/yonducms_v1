@@ -1,0 +1,66 @@
+.marginLeft{
+    margin-left:10px;
+
+}
+.marginTop{
+    margin-top:30px;
+}
+
+#listOfFiles{
+    width:500px;
+    top:50;
+    right:20;
+    position :fixed;
+    margin-bottom:100px;
+    border-top: 1px solid black;
+    border-lefmyCarouselt: 1px solid black;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    padding:20px;
+    padding-right:40px;
+
+    border-radius: 20px;
+}
+
+
+.tableFiles{
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    width:100px;
+}
+
+.Nform-control{
+    width:300px !important;
+    margin:10px;
+}
+
+.Tform-control{
+    width:500px !important;
+    margin:10px;
+}
+
+#cke_editor1{
+    width:800px;
+}
+
+#bannerList{
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    width:500px;
+    height:300px;
+    overflow: auto;
+}
+
+.tableBanner{
+    width:350px;
+    margin-left:10px;
+    overflow: auto;
+
+}
+
+.codeEditor{
+height:500px;
+width:500px;
+}

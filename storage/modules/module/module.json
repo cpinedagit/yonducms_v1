@@ -1,0 +1,1 @@
+{"custom-appends":{"\/app\/Modules\/Install_Module.php":"\/\/New module added: 2015-05-13 02:29:15pm"},"routes-appends":[{"controller":"SampleController","method":"index","url":"samplemodule"}]}
